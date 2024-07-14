@@ -1,6 +1,14 @@
+'use client'
+
 import InfoCard from "@/components/InfoCard"
+import { useEffect, useState } from "react"
+import API from "@/lib/axios"
+import HttpCalls from "@/hooks/HttpCalls"
+import { Button } from "@/components/ui/button"
 
 const Page = () => {
+    const [ loading, data, error, fetch ] = HttpCalls("/prova")
+
     return (
         <>
             <InfoCard
@@ -22,6 +30,8 @@ const Page = () => {
                     &emsp;] <br />
                     &#125;
                 </div>)} />
+
+            {!loading ? <div>{JSON.stringify(data)}</div> : <div>loading</div>}
         </>
     )
 }
