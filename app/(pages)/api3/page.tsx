@@ -24,7 +24,7 @@ const formSchema = z.object({
     OffertaLavoroID: z.number(),
     Titolo: z.string().min(3),
     DescrizioneBreve: z.string().min(3),
-    RetribuzioneLorda: z.number()
+    RetribuzioneLorda: z.coerce.number()
 })
 
 const Page = () => {
@@ -80,20 +80,19 @@ const Page = () => {
     return (
         <>
             <InfoCard
-                link="http://localhost:3000/api/prova"
-                title="API 1"
-                description="Restituire la lista delle richieste di finanziamento (in ordine decrescente di
-                    DataInserimentoRichiesta) inviando tramite Get il numero massimo di Richieste di finanziamento
-                    che si vogliono visualizzare"
-                type="GET"
+                link="http://localhost:3000/api/api1"
+                title="API 3"
+                description="Inviare tramite post una offerta di lavoro per poterla modificare"
+                type="POST"
                 exampleOutput={(<div>
                     &#123; <br />
                     &emsp;    "status": "OK", <br />
                     &emsp;    "data": [ <br />
                     &emsp;&emsp;&#123; <br />
-                    &emsp;&emsp;&emsp;    "id": 1, <br />
-                    &emsp;&emsp;&emsp;    "nome": "Luca", <br />
-                    &emsp;&emsp;&emsp;    "descrizione": "Ciao mi piace" <br />
+                    &emsp;&emsp;&emsp;    "Titolo": "Aiuto magazzino", <br />
+                    &emsp;&emsp;&emsp;    "DescrizioneBreve": "Personale per aiuto magazzino full-time" <br />
+                    &emsp;&emsp;&emsp;    "DataInserimento": "2024-07-10T00:00:00.000Z" <br />
+                    &emsp;&emsp;&emsp;    "RetribuzioneLorda": "2700" <br />
                     &emsp;&emsp;&#125; <br />
                     &emsp;] <br />
                     &#125;
@@ -182,8 +181,6 @@ const Page = () => {
                                                 </FormControl>
                                                 {errorDate && <div className="text-sm text-red-500">{errorDate}</div>}
                                             </FormItem>
-
-
 
                                             <FormField
                                                 control={form.control}

@@ -11,7 +11,7 @@ export async function GET(req: NextRequest) {
         let where
         const filter = searchParams.get('filter')
         if(filter != undefined) {
-            where = { Titolo: { contains: filter }}
+            where = { OR: [{ Titolo: { contains: filter }}, { DescrizioneBreve: { contains: filter }}]}
         }
         
         const data = await prisma.tOfferteLavoro.findMany({ 

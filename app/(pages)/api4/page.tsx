@@ -48,24 +48,27 @@ const Page = () => {
     return (
         <>
             <InfoCard
-                link="http://localhost:3000/api/prova"
-                title="API 1"
-                description="Restituire la lista delle richieste di finanziamento (in ordine decrescente di
-                    DataInserimentoRichiesta) inviando tramite Get il numero massimo di Richieste di finanziamento
-                    che si vogliono visualizzare"
+                link="http://localhost:3000/api/api1/5"
+                title="API 4"
+                description="Inviare tramite get una offerta di lavoro per poterla eliminare"
                 type="GET"
-                exampleOutput={(<div>
-                    &#123; <br />
-                    &emsp;    "status": "OK", <br />
-                    &emsp;    "data": [ <br />
-                    &emsp;&emsp;&#123; <br />
-                    &emsp;&emsp;&emsp;    "id": 1, <br />
-                    &emsp;&emsp;&emsp;    "nome": "Luca", <br />
-                    &emsp;&emsp;&emsp;    "descrizione": "Ciao mi piace" <br />
-                    &emsp;&emsp;&#125; <br />
-                    &emsp;] <br />
-                    &#125;
-                </div>)} />
+                exampleOutput={(
+                    <div>
+                        &#123; <br />
+                        &emsp;    "status": "OK", <br />
+                        &emsp;    "data": [ <br />
+                        &emsp;&emsp;&#123; <br />
+                        &emsp;&emsp;&emsp;    "OffertaLavoroID": 5 <br />
+                        &emsp;&emsp;&emsp;    "Titolo": "Web developer full stacks", <br />
+                        &emsp;&emsp;&emsp;    "DescrizioneBreve": "Angular, MongoDB, Express" <br />
+                        &emsp;&emsp;&emsp;    "DataInserimento": "2024-07-15T22:00:00.000Z" <br />
+                        &emsp;&emsp;&emsp;    "RetribuzioneLorda": "2301" <br />
+                        &emsp;&emsp;&#125; <br />
+                        &emsp;] <br />
+                        &#125;
+                    </div>
+                )}
+                />
 
             {data && <div>
                 {data.data.map((l) => (

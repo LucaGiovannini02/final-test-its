@@ -1,6 +1,7 @@
 "use client"
 
 import { DatePicker } from "@/components/DatePicker"
+import InfoCard from "@/components/InfoCard"
 import Loading from "@/components/Loading"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Button } from "@/components/ui/button"
@@ -65,8 +66,27 @@ const Page = () => {
 
     return (
         <>
+            <InfoCard
+                link="http://localhost:3000/api/api1"
+                title="API 2"
+                description="Inviare tramite post una nuova offerta di lavoro"
+                type="POST"
+                exampleInput={(<div>
+                    &#123; <br />
+                    &emsp;    "status": "OK", <br />
+                    &emsp;    "data": [ <br />
+                    &emsp;&emsp;&#123; <br />
+                    &emsp;&emsp;&emsp;    "Titolo": "Aiuto magazzino", <br />
+                    &emsp;&emsp;&emsp;    "DescrizioneBreve": "Personale per aiuto magazzino full-time" <br />
+                    &emsp;&emsp;&emsp;    "DataInserimento": "2024-07-10T00:00:00.000Z" <br />
+                    &emsp;&emsp;&emsp;    "RetribuzioneLorda": "2000" <br />
+                    &emsp;&emsp;&#125; <br />
+                    &emsp;] <br />
+                    &#125;
+                </div>)} />
+
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 relative">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 relative mt-3">
                     <FormField
                         control={form.control}
                         name="Titolo"
