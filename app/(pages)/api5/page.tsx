@@ -3,6 +3,7 @@
 import InfoCard from "@/components/InfoCard"
 import LavoroCard from "@/components/LavoroCard"
 import Loading from "@/components/Loading"
+import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import API from "@/lib/axios"
 import { HttpResponse, Lavoro } from "@/lib/definitions"
@@ -13,16 +14,17 @@ const Page = () => {
     const [data, setData] = useState<HttpResponse<Lavoro[]> | undefined>(undefined)
     const [error, setError] = useState<any>()
 
+    const [filter, setFilter] = useState('')
     const [max, setMax] = useState<number | undefined>()
 
     useEffect(() => {
         getData()
     }, [])
 
-    const getData = (x: number | undefined = undefined) => {
-        setLoading(true)
+    const getData = (x: string = '') => {
         setData(undefined)
-        API.get<HttpResponse<Lavoro[]>>(`/api/api1?max=${x}`).then((res) => {
+        setLoading(true)
+        API.get<HttpResponse<Lavoro[]>>(`/api/api5${x}`).then((res) => {
             setData(res.data)
         }).then((err) => {
             setError(err)
@@ -42,10 +44,23 @@ const Page = () => {
         }
     }
 
-    useEffect(() => {
-        getData(max)
-    }, [max])
+    const apply = () => {
+        let aus = '?'
+        if(max) {
+            aus += `max=${max}`
+        }
+        if(filter) {
+            if(aus.length > 1)
+                aus += `&filter=${filter}`
+            else
+                aus += `filter=${filter}`
+        }
 
+        if(aus.length > 1)
+            getData(aus)
+        else 
+            getData()
+    }
 
     return (
         <>
@@ -69,7 +84,11 @@ const Page = () => {
                     &#125;
                 </div>)} />
 
-            <Input min={0} value={max} onChange={(e) => handleMaxChange(e.target.value)} placeholder="Numero massimo" className="w-[200px] mt-3" type="number" />
+            <div className="flex space-x-3 mt-3">
+                <Input onChange={(e) => setFilter(e.target.value)} placeholder="Titolo o breve descrizione" className="w-[500px]" />
+                <Input min={0} value={max} onChange={(e) => handleMaxChange(e.target.value)} placeholder="Numero massimo" className="w-[200px]" type="number" />
+                <Button onClick={apply}>Applica</Button>
+            </div>
             {data && <div>
                 {data.data.map((l) => (
                     <div key={l.OffertaLavoroID} className="mt-3">

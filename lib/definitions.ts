@@ -7,6 +7,6 @@ export type Lavoro = {
     OffertaLavoroID: number
     Titolo: string,
     DescrizioneBreve: string,
-    DataInserimento: string,
+    DataInserimento: Date,
     RetribuzioneLorda: number
 }

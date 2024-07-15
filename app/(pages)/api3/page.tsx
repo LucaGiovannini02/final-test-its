@@ -3,9 +3,9 @@
 import InfoCard from "@/components/InfoCard"
 import LavoroCard from "@/components/LavoroCard"
 import Loading from "@/components/Loading"
-import { Input } from "@/components/ui/input"
 import API from "@/lib/axios"
 import { HttpResponse, Lavoro } from "@/lib/definitions"
+import { Pencil } from "lucide-react"
 import { useEffect, useState } from "react"
 
 const Page = () => {
@@ -13,38 +13,16 @@ const Page = () => {
     const [data, setData] = useState<HttpResponse<Lavoro[]> | undefined>(undefined)
     const [error, setError] = useState<any>()
 
-    const [max, setMax] = useState<number | undefined>()
-
     useEffect(() => {
-        getData()
-    }, [])
-
-    const getData = (x: number | undefined = undefined) => {
         setLoading(true)
-        setData(undefined)
-        API.get<HttpResponse<Lavoro[]>>(`/api/api1?max=${x}`).then((res) => {
+        API.get<HttpResponse<Lavoro[]>>(`/api/api1`).then((res) => {
             setData(res.data)
         }).then((err) => {
             setError(err)
         }).finally(() => {
             setLoading(false)
         })
-    }
-
-    const handleMaxChange = (value: string) => {
-        if(value == '') {
-            setMax(undefined)
-        } else if (!isNaN(Number(value))) {
-            if(Number(value) >= 0)
-                setMax(Number(value))
-            else 
-                setMax(0)
-        }
-    }
-
-    useEffect(() => {
-        getData(max)
-    }, [max])
+    }, [])
 
 
     return (
@@ -69,11 +47,10 @@ const Page = () => {
                     &#125;
                 </div>)} />
 
-            <Input min={0} value={max} onChange={(e) => handleMaxChange(e.target.value)} placeholder="Numero massimo" className="w-[200px] mt-3" type="number" />
             {data && <div>
                 {data.data.map((l) => (
                     <div key={l.OffertaLavoroID} className="mt-3">
-                        <LavoroCard lavoro={l} />
+                        <LavoroCard lavoro={l} button={(<div><Pencil className="hover:text-blue-500 cursor-pointer" /></div>)} />
                     </div>
                 ))}
             </div>}
