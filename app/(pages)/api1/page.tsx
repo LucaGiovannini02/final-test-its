@@ -50,18 +50,16 @@ const Page = () => {
     return (
         <>
             <InfoCard
-                link="http://localhost:3000/api/prova"
+                link="http://localhost:3000/api/api1"
                 title="API 1"
-                description="Restituire la lista delle richieste di finanziamento (in ordine decrescente di
-                    DataInserimentoRichiesta) inviando tramite Get il numero massimo di Richieste di finanziamento
-                    che si vogliono visualizzare"
+                description="Restituire la lista delle richieste di lavoro"
                 type="GET"
                 exampleOutput={(<div>
                     &#123; <br />
                     &emsp;    "status": "OK", <br />
                     &emsp;    "data": [ <br />
                     &emsp;&emsp;&#123; <br />
-                    &emsp;&emsp;&emsp;    "id": 1, <br />
+                    &emsp;&emsp;&emsp;     <br />
                     &emsp;&emsp;&emsp;    "nome": "Luca", <br />
                     &emsp;&emsp;&emsp;    "descrizione": "Ciao mi piace" <br />
                     &emsp;&emsp;&#125; <br />
