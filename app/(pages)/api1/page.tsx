@@ -47,7 +47,7 @@ const Page = () => {
 
             {data && <div>
                 {data.data.map((l) => (
-                    <div className="mt-3">
+                    <div key={l.OffertaLavoroID} className="mt-3">
                         <LavoroCard lavoro={l} />
                     </div>
                 ))}
