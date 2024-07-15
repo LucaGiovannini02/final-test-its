@@ -12,7 +12,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import API from "@/lib/axios"
 import { cn } from "@/lib/utils"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { format } from "date-fns"
+import { addDays, format } from "date-fns"
 import { AlertCircle, CalendarIcon } from "lucide-react"
 import { redirect } from "next/navigation"
 import { useRouter } from "next/navigation"
@@ -54,8 +54,10 @@ const Page = () => {
             return
         }
 
+        const aus = addDays(date, 1)
+
         setLoading(true)
-        API.post("/api/api2", { ...values, DataInserimento: date }).then(() => {
+        API.post("/api/api2", { ...values, DataInserimento: aus }).then(() => {
             router.push("/")
         }).catch((e) => {
             setError(e.data.error)

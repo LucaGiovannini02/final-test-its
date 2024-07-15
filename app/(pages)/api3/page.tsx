@@ -64,7 +64,6 @@ const Page = () => {
         }
 
         const aus = addDays(date, 1)
-        console.log(aus.toISOString())
 
         setLoading(true)
         setData(undefined)
