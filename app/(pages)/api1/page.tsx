@@ -1,13 +1,27 @@
 'use client'
 
 import InfoCard from "@/components/InfoCard"
-import { useEffect, useState } from "react"
+import LavoroCard from "@/components/LavoroCard"
 import API from "@/lib/axios"
-import HttpCalls from "@/hooks/HttpCalls"
-import { Button } from "@/components/ui/button"
+import { HttpResponse, Lavoro } from "@/lib/definitions"
+import { useEffect, useState } from "react"
 
 const Page = () => {
-    const [ loading, data, error, fetch ] = HttpCalls("/prova")
+    const [loading, setLoading] = useState(false)
+    const [data, setData] = useState<HttpResponse<Lavoro[]> | undefined>(undefined)
+    const [error, setError] = useState<any>()
+
+    useEffect(() => {
+        setLoading(true)
+        API.get<HttpResponse<Lavoro[]>>(`/api/api1`).then((res) => {
+            setData(res.data)
+        }).then((err) => {
+            setError(err)
+        }).finally(() => {
+            setLoading(false)
+        })
+    }, [])
+
 
     return (
         <>
@@ -31,7 +45,13 @@ const Page = () => {
                     &#125;
                 </div>)} />
 
-            {!loading ? <div>{JSON.stringify(data)}</div> : <div>loading</div>}
+            {data && <div>
+                {data.data.map((l) => (
+                    <div className="mt-3">
+                        <LavoroCard lavoro={l} />
+                    </div>
+                ))}
+            </div>}
         </>
     )
 }

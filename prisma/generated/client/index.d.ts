@@ -14,10 +14,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model Prova
+ * Model TOfferteLavoro
  * 
  */
-export type Prova = $Result.DefaultSelection<Prisma.$ProvaPayload>
+export type TOfferteLavoro = $Result.DefaultSelection<Prisma.$TOfferteLavoroPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -26,8 +26,8 @@ export type Prova = $Result.DefaultSelection<Prisma.$ProvaPayload>
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Prova
- * const prova = await prisma.prova.findMany()
+ * // Fetch zero or more TOfferteLavoros
+ * const tOfferteLavoros = await prisma.tOfferteLavoro.findMany()
  * ```
  *
  * 
@@ -47,8 +47,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more Prova
-   * const prova = await prisma.prova.findMany()
+   * // Fetch zero or more TOfferteLavoros
+   * const tOfferteLavoros = await prisma.tOfferteLavoro.findMany()
    * ```
    *
    * 
@@ -142,14 +142,14 @@ export class PrismaClient<
   $extends: $Extensions.ExtendsHook<"extends", Prisma.TypeMapCb, ExtArgs>
 
       /**
-   * `prisma.prova`: Exposes CRUD operations for the **Prova** model.
+   * `prisma.tOfferteLavoro`: Exposes CRUD operations for the **TOfferteLavoro** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Prova
-    * const prova = await prisma.prova.findMany()
+    * // Fetch zero or more TOfferteLavoros
+    * const tOfferteLavoros = await prisma.tOfferteLavoro.findMany()
     * ```
     */
-  get prova(): Prisma.ProvaDelegate<ExtArgs>;
+  get tOfferteLavoro(): Prisma.TOfferteLavoroDelegate<ExtArgs>;
 }
 
 export namespace Prisma {
@@ -627,7 +627,7 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    Prova: 'Prova'
+    TOfferteLavoro: 'TOfferteLavoro'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -643,77 +643,77 @@ export namespace Prisma {
 
   export type TypeMap<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, ClientOptions = {}> = {
     meta: {
-      modelProps: "prova"
+      modelProps: "tOfferteLavoro"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      Prova: {
-        payload: Prisma.$ProvaPayload<ExtArgs>
-        fields: Prisma.ProvaFieldRefs
+      TOfferteLavoro: {
+        payload: Prisma.$TOfferteLavoroPayload<ExtArgs>
+        fields: Prisma.TOfferteLavoroFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.ProvaFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ProvaPayload> | null
+            args: Prisma.TOfferteLavoroFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TOfferteLavoroPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.ProvaFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ProvaPayload>
+            args: Prisma.TOfferteLavoroFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TOfferteLavoroPayload>
           }
           findFirst: {
-            args: Prisma.ProvaFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ProvaPayload> | null
+            args: Prisma.TOfferteLavoroFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TOfferteLavoroPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.ProvaFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ProvaPayload>
+            args: Prisma.TOfferteLavoroFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TOfferteLavoroPayload>
           }
           findMany: {
-            args: Prisma.ProvaFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ProvaPayload>[]
+            args: Prisma.TOfferteLavoroFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TOfferteLavoroPayload>[]
           }
           create: {
-            args: Prisma.ProvaCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ProvaPayload>
+            args: Prisma.TOfferteLavoroCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TOfferteLavoroPayload>
           }
           createMany: {
-            args: Prisma.ProvaCreateManyArgs<ExtArgs>
+            args: Prisma.TOfferteLavoroCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.ProvaCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ProvaPayload>[]
+            args: Prisma.TOfferteLavoroCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TOfferteLavoroPayload>[]
           }
           delete: {
-            args: Prisma.ProvaDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ProvaPayload>
+            args: Prisma.TOfferteLavoroDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TOfferteLavoroPayload>
           }
           update: {
-            args: Prisma.ProvaUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ProvaPayload>
+            args: Prisma.TOfferteLavoroUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TOfferteLavoroPayload>
           }
           deleteMany: {
-            args: Prisma.ProvaDeleteManyArgs<ExtArgs>
+            args: Prisma.TOfferteLavoroDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.ProvaUpdateManyArgs<ExtArgs>
+            args: Prisma.TOfferteLavoroUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           upsert: {
-            args: Prisma.ProvaUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ProvaPayload>
+            args: Prisma.TOfferteLavoroUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TOfferteLavoroPayload>
           }
           aggregate: {
-            args: Prisma.ProvaAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateProva>
+            args: Prisma.TOfferteLavoroAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateTOfferteLavoro>
           }
           groupBy: {
-            args: Prisma.ProvaGroupByArgs<ExtArgs>
-            result: $Utils.Optional<ProvaGroupByOutputType>[]
+            args: Prisma.TOfferteLavoroGroupByArgs<ExtArgs>
+            result: $Utils.Optional<TOfferteLavoroGroupByOutputType>[]
           }
           count: {
-            args: Prisma.ProvaCountArgs<ExtArgs>
-            result: $Utils.Optional<ProvaCountAggregateOutputType> | number
+            args: Prisma.TOfferteLavoroCountArgs<ExtArgs>
+            result: $Utils.Optional<TOfferteLavoroCountAggregateOutputType> | number
           }
         }
       }
@@ -879,340 +879,366 @@ export namespace Prisma {
    */
 
   /**
-   * Model Prova
+   * Model TOfferteLavoro
    */
 
-  export type AggregateProva = {
-    _count: ProvaCountAggregateOutputType | null
-    _avg: ProvaAvgAggregateOutputType | null
-    _sum: ProvaSumAggregateOutputType | null
-    _min: ProvaMinAggregateOutputType | null
-    _max: ProvaMaxAggregateOutputType | null
+  export type AggregateTOfferteLavoro = {
+    _count: TOfferteLavoroCountAggregateOutputType | null
+    _avg: TOfferteLavoroAvgAggregateOutputType | null
+    _sum: TOfferteLavoroSumAggregateOutputType | null
+    _min: TOfferteLavoroMinAggregateOutputType | null
+    _max: TOfferteLavoroMaxAggregateOutputType | null
   }
 
-  export type ProvaAvgAggregateOutputType = {
-    id: number | null
+  export type TOfferteLavoroAvgAggregateOutputType = {
+    OffertaLavoroID: number | null
+    RetribuzioneLorda: number | null
   }
 
-  export type ProvaSumAggregateOutputType = {
-    id: number | null
+  export type TOfferteLavoroSumAggregateOutputType = {
+    OffertaLavoroID: number | null
+    RetribuzioneLorda: number | null
   }
 
-  export type ProvaMinAggregateOutputType = {
-    id: number | null
-    nome: string | null
-    descrizione: string | null
+  export type TOfferteLavoroMinAggregateOutputType = {
+    OffertaLavoroID: number | null
+    Titolo: string | null
+    DescrizioneBreve: string | null
+    DataInserimento: Date | null
+    RetribuzioneLorda: number | null
   }
 
-  export type ProvaMaxAggregateOutputType = {
-    id: number | null
-    nome: string | null
-    descrizione: string | null
+  export type TOfferteLavoroMaxAggregateOutputType = {
+    OffertaLavoroID: number | null
+    Titolo: string | null
+    DescrizioneBreve: string | null
+    DataInserimento: Date | null
+    RetribuzioneLorda: number | null
   }
 
-  export type ProvaCountAggregateOutputType = {
-    id: number
-    nome: number
-    descrizione: number
+  export type TOfferteLavoroCountAggregateOutputType = {
+    OffertaLavoroID: number
+    Titolo: number
+    DescrizioneBreve: number
+    DataInserimento: number
+    RetribuzioneLorda: number
     _all: number
   }
 
 
-  export type ProvaAvgAggregateInputType = {
-    id?: true
+  export type TOfferteLavoroAvgAggregateInputType = {
+    OffertaLavoroID?: true
+    RetribuzioneLorda?: true
   }
 
-  export type ProvaSumAggregateInputType = {
-    id?: true
+  export type TOfferteLavoroSumAggregateInputType = {
+    OffertaLavoroID?: true
+    RetribuzioneLorda?: true
   }
 
-  export type ProvaMinAggregateInputType = {
-    id?: true
-    nome?: true
-    descrizione?: true
+  export type TOfferteLavoroMinAggregateInputType = {
+    OffertaLavoroID?: true
+    Titolo?: true
+    DescrizioneBreve?: true
+    DataInserimento?: true
+    RetribuzioneLorda?: true
   }
 
-  export type ProvaMaxAggregateInputType = {
-    id?: true
-    nome?: true
-    descrizione?: true
+  export type TOfferteLavoroMaxAggregateInputType = {
+    OffertaLavoroID?: true
+    Titolo?: true
+    DescrizioneBreve?: true
+    DataInserimento?: true
+    RetribuzioneLorda?: true
   }
 
-  export type ProvaCountAggregateInputType = {
-    id?: true
-    nome?: true
-    descrizione?: true
+  export type TOfferteLavoroCountAggregateInputType = {
+    OffertaLavoroID?: true
+    Titolo?: true
+    DescrizioneBreve?: true
+    DataInserimento?: true
+    RetribuzioneLorda?: true
     _all?: true
   }
 
-  export type ProvaAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TOfferteLavoroAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Prova to aggregate.
+     * Filter which TOfferteLavoro to aggregate.
      */
-    where?: ProvaWhereInput
+    where?: TOfferteLavoroWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Prova to fetch.
+     * Determine the order of TOfferteLavoros to fetch.
      */
-    orderBy?: ProvaOrderByWithRelationInput | ProvaOrderByWithRelationInput[]
+    orderBy?: TOfferteLavoroOrderByWithRelationInput | TOfferteLavoroOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: ProvaWhereUniqueInput
+    cursor?: TOfferteLavoroWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Prova from the position of the cursor.
+     * Take `±n` TOfferteLavoros from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Prova.
+     * Skip the first `n` TOfferteLavoros.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Prova
+     * Count returned TOfferteLavoros
     **/
-    _count?: true | ProvaCountAggregateInputType
+    _count?: true | TOfferteLavoroCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: ProvaAvgAggregateInputType
+    _avg?: TOfferteLavoroAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: ProvaSumAggregateInputType
+    _sum?: TOfferteLavoroSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: ProvaMinAggregateInputType
+    _min?: TOfferteLavoroMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: ProvaMaxAggregateInputType
+    _max?: TOfferteLavoroMaxAggregateInputType
   }
 
-  export type GetProvaAggregateType<T extends ProvaAggregateArgs> = {
-        [P in keyof T & keyof AggregateProva]: P extends '_count' | 'count'
+  export type GetTOfferteLavoroAggregateType<T extends TOfferteLavoroAggregateArgs> = {
+        [P in keyof T & keyof AggregateTOfferteLavoro]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateProva[P]>
-      : GetScalarType<T[P], AggregateProva[P]>
+        : GetScalarType<T[P], AggregateTOfferteLavoro[P]>
+      : GetScalarType<T[P], AggregateTOfferteLavoro[P]>
   }
 
 
 
 
-  export type ProvaGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: ProvaWhereInput
-    orderBy?: ProvaOrderByWithAggregationInput | ProvaOrderByWithAggregationInput[]
-    by: ProvaScalarFieldEnum[] | ProvaScalarFieldEnum
-    having?: ProvaScalarWhereWithAggregatesInput
+  export type TOfferteLavoroGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: TOfferteLavoroWhereInput
+    orderBy?: TOfferteLavoroOrderByWithAggregationInput | TOfferteLavoroOrderByWithAggregationInput[]
+    by: TOfferteLavoroScalarFieldEnum[] | TOfferteLavoroScalarFieldEnum
+    having?: TOfferteLavoroScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: ProvaCountAggregateInputType | true
-    _avg?: ProvaAvgAggregateInputType
-    _sum?: ProvaSumAggregateInputType
-    _min?: ProvaMinAggregateInputType
-    _max?: ProvaMaxAggregateInputType
+    _count?: TOfferteLavoroCountAggregateInputType | true
+    _avg?: TOfferteLavoroAvgAggregateInputType
+    _sum?: TOfferteLavoroSumAggregateInputType
+    _min?: TOfferteLavoroMinAggregateInputType
+    _max?: TOfferteLavoroMaxAggregateInputType
   }
 
-  export type ProvaGroupByOutputType = {
-    id: number
-    nome: string
-    descrizione: string
-    _count: ProvaCountAggregateOutputType | null
-    _avg: ProvaAvgAggregateOutputType | null
-    _sum: ProvaSumAggregateOutputType | null
-    _min: ProvaMinAggregateOutputType | null
-    _max: ProvaMaxAggregateOutputType | null
+  export type TOfferteLavoroGroupByOutputType = {
+    OffertaLavoroID: number
+    Titolo: string
+    DescrizioneBreve: string
+    DataInserimento: Date
+    RetribuzioneLorda: number
+    _count: TOfferteLavoroCountAggregateOutputType | null
+    _avg: TOfferteLavoroAvgAggregateOutputType | null
+    _sum: TOfferteLavoroSumAggregateOutputType | null
+    _min: TOfferteLavoroMinAggregateOutputType | null
+    _max: TOfferteLavoroMaxAggregateOutputType | null
   }
 
-  type GetProvaGroupByPayload<T extends ProvaGroupByArgs> = Prisma.PrismaPromise<
+  type GetTOfferteLavoroGroupByPayload<T extends TOfferteLavoroGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<ProvaGroupByOutputType, T['by']> &
+      PickEnumerable<TOfferteLavoroGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof ProvaGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof TOfferteLavoroGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], ProvaGroupByOutputType[P]>
-            : GetScalarType<T[P], ProvaGroupByOutputType[P]>
+              : GetScalarType<T[P], TOfferteLavoroGroupByOutputType[P]>
+            : GetScalarType<T[P], TOfferteLavoroGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type ProvaSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
-    nome?: boolean
-    descrizione?: boolean
-  }, ExtArgs["result"]["prova"]>
+  export type TOfferteLavoroSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    OffertaLavoroID?: boolean
+    Titolo?: boolean
+    DescrizioneBreve?: boolean
+    DataInserimento?: boolean
+    RetribuzioneLorda?: boolean
+  }, ExtArgs["result"]["tOfferteLavoro"]>
 
-  export type ProvaSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
-    nome?: boolean
-    descrizione?: boolean
-  }, ExtArgs["result"]["prova"]>
+  export type TOfferteLavoroSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    OffertaLavoroID?: boolean
+    Titolo?: boolean
+    DescrizioneBreve?: boolean
+    DataInserimento?: boolean
+    RetribuzioneLorda?: boolean
+  }, ExtArgs["result"]["tOfferteLavoro"]>
 
-  export type ProvaSelectScalar = {
-    id?: boolean
-    nome?: boolean
-    descrizione?: boolean
+  export type TOfferteLavoroSelectScalar = {
+    OffertaLavoroID?: boolean
+    Titolo?: boolean
+    DescrizioneBreve?: boolean
+    DataInserimento?: boolean
+    RetribuzioneLorda?: boolean
   }
 
 
-  export type $ProvaPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Prova"
+  export type $TOfferteLavoroPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "TOfferteLavoro"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
-      id: number
-      nome: string
-      descrizione: string
-    }, ExtArgs["result"]["prova"]>
+      OffertaLavoroID: number
+      Titolo: string
+      DescrizioneBreve: string
+      DataInserimento: Date
+      RetribuzioneLorda: number
+    }, ExtArgs["result"]["tOfferteLavoro"]>
     composites: {}
   }
 
-  type ProvaGetPayload<S extends boolean | null | undefined | ProvaDefaultArgs> = $Result.GetResult<Prisma.$ProvaPayload, S>
+  type TOfferteLavoroGetPayload<S extends boolean | null | undefined | TOfferteLavoroDefaultArgs> = $Result.GetResult<Prisma.$TOfferteLavoroPayload, S>
 
-  type ProvaCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<ProvaFindManyArgs, 'select' | 'include' | 'distinct'> & {
-      select?: ProvaCountAggregateInputType | true
+  type TOfferteLavoroCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<TOfferteLavoroFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: TOfferteLavoroCountAggregateInputType | true
     }
 
-  export interface ProvaDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Prova'], meta: { name: 'Prova' } }
+  export interface TOfferteLavoroDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['TOfferteLavoro'], meta: { name: 'TOfferteLavoro' } }
     /**
-     * Find zero or one Prova that matches the filter.
-     * @param {ProvaFindUniqueArgs} args - Arguments to find a Prova
+     * Find zero or one TOfferteLavoro that matches the filter.
+     * @param {TOfferteLavoroFindUniqueArgs} args - Arguments to find a TOfferteLavoro
      * @example
-     * // Get one Prova
-     * const prova = await prisma.prova.findUnique({
+     * // Get one TOfferteLavoro
+     * const tOfferteLavoro = await prisma.tOfferteLavoro.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends ProvaFindUniqueArgs>(args: SelectSubset<T, ProvaFindUniqueArgs<ExtArgs>>): Prisma__ProvaClient<$Result.GetResult<Prisma.$ProvaPayload<ExtArgs>, T, "findUnique"> | null, null, ExtArgs>
+    findUnique<T extends TOfferteLavoroFindUniqueArgs>(args: SelectSubset<T, TOfferteLavoroFindUniqueArgs<ExtArgs>>): Prisma__TOfferteLavoroClient<$Result.GetResult<Prisma.$TOfferteLavoroPayload<ExtArgs>, T, "findUnique"> | null, null, ExtArgs>
 
     /**
-     * Find one Prova that matches the filter or throw an error with `error.code='P2025'` 
+     * Find one TOfferteLavoro that matches the filter or throw an error with `error.code='P2025'` 
      * if no matches were found.
-     * @param {ProvaFindUniqueOrThrowArgs} args - Arguments to find a Prova
+     * @param {TOfferteLavoroFindUniqueOrThrowArgs} args - Arguments to find a TOfferteLavoro
      * @example
-     * // Get one Prova
-     * const prova = await prisma.prova.findUniqueOrThrow({
+     * // Get one TOfferteLavoro
+     * const tOfferteLavoro = await prisma.tOfferteLavoro.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends ProvaFindUniqueOrThrowArgs>(args: SelectSubset<T, ProvaFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ProvaClient<$Result.GetResult<Prisma.$ProvaPayload<ExtArgs>, T, "findUniqueOrThrow">, never, ExtArgs>
+    findUniqueOrThrow<T extends TOfferteLavoroFindUniqueOrThrowArgs>(args: SelectSubset<T, TOfferteLavoroFindUniqueOrThrowArgs<ExtArgs>>): Prisma__TOfferteLavoroClient<$Result.GetResult<Prisma.$TOfferteLavoroPayload<ExtArgs>, T, "findUniqueOrThrow">, never, ExtArgs>
 
     /**
-     * Find the first Prova that matches the filter.
+     * Find the first TOfferteLavoro that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ProvaFindFirstArgs} args - Arguments to find a Prova
+     * @param {TOfferteLavoroFindFirstArgs} args - Arguments to find a TOfferteLavoro
      * @example
-     * // Get one Prova
-     * const prova = await prisma.prova.findFirst({
+     * // Get one TOfferteLavoro
+     * const tOfferteLavoro = await prisma.tOfferteLavoro.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends ProvaFindFirstArgs>(args?: SelectSubset<T, ProvaFindFirstArgs<ExtArgs>>): Prisma__ProvaClient<$Result.GetResult<Prisma.$ProvaPayload<ExtArgs>, T, "findFirst"> | null, null, ExtArgs>
+    findFirst<T extends TOfferteLavoroFindFirstArgs>(args?: SelectSubset<T, TOfferteLavoroFindFirstArgs<ExtArgs>>): Prisma__TOfferteLavoroClient<$Result.GetResult<Prisma.$TOfferteLavoroPayload<ExtArgs>, T, "findFirst"> | null, null, ExtArgs>
 
     /**
-     * Find the first Prova that matches the filter or
+     * Find the first TOfferteLavoro that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ProvaFindFirstOrThrowArgs} args - Arguments to find a Prova
+     * @param {TOfferteLavoroFindFirstOrThrowArgs} args - Arguments to find a TOfferteLavoro
      * @example
-     * // Get one Prova
-     * const prova = await prisma.prova.findFirstOrThrow({
+     * // Get one TOfferteLavoro
+     * const tOfferteLavoro = await prisma.tOfferteLavoro.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends ProvaFindFirstOrThrowArgs>(args?: SelectSubset<T, ProvaFindFirstOrThrowArgs<ExtArgs>>): Prisma__ProvaClient<$Result.GetResult<Prisma.$ProvaPayload<ExtArgs>, T, "findFirstOrThrow">, never, ExtArgs>
+    findFirstOrThrow<T extends TOfferteLavoroFindFirstOrThrowArgs>(args?: SelectSubset<T, TOfferteLavoroFindFirstOrThrowArgs<ExtArgs>>): Prisma__TOfferteLavoroClient<$Result.GetResult<Prisma.$TOfferteLavoroPayload<ExtArgs>, T, "findFirstOrThrow">, never, ExtArgs>
 
     /**
-     * Find zero or more Prova that matches the filter.
+     * Find zero or more TOfferteLavoros that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ProvaFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {TOfferteLavoroFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Prova
-     * const prova = await prisma.prova.findMany()
+     * // Get all TOfferteLavoros
+     * const tOfferteLavoros = await prisma.tOfferteLavoro.findMany()
      * 
-     * // Get first 10 Prova
-     * const prova = await prisma.prova.findMany({ take: 10 })
+     * // Get first 10 TOfferteLavoros
+     * const tOfferteLavoros = await prisma.tOfferteLavoro.findMany({ take: 10 })
      * 
-     * // Only select the `id`
-     * const provaWithIdOnly = await prisma.prova.findMany({ select: { id: true } })
+     * // Only select the `OffertaLavoroID`
+     * const tOfferteLavoroWithOffertaLavoroIDOnly = await prisma.tOfferteLavoro.findMany({ select: { OffertaLavoroID: true } })
      * 
      */
-    findMany<T extends ProvaFindManyArgs>(args?: SelectSubset<T, ProvaFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ProvaPayload<ExtArgs>, T, "findMany">>
+    findMany<T extends TOfferteLavoroFindManyArgs>(args?: SelectSubset<T, TOfferteLavoroFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TOfferteLavoroPayload<ExtArgs>, T, "findMany">>
 
     /**
-     * Create a Prova.
-     * @param {ProvaCreateArgs} args - Arguments to create a Prova.
+     * Create a TOfferteLavoro.
+     * @param {TOfferteLavoroCreateArgs} args - Arguments to create a TOfferteLavoro.
      * @example
-     * // Create one Prova
-     * const Prova = await prisma.prova.create({
+     * // Create one TOfferteLavoro
+     * const TOfferteLavoro = await prisma.tOfferteLavoro.create({
      *   data: {
-     *     // ... data to create a Prova
+     *     // ... data to create a TOfferteLavoro
      *   }
      * })
      * 
      */
-    create<T extends ProvaCreateArgs>(args: SelectSubset<T, ProvaCreateArgs<ExtArgs>>): Prisma__ProvaClient<$Result.GetResult<Prisma.$ProvaPayload<ExtArgs>, T, "create">, never, ExtArgs>
+    create<T extends TOfferteLavoroCreateArgs>(args: SelectSubset<T, TOfferteLavoroCreateArgs<ExtArgs>>): Prisma__TOfferteLavoroClient<$Result.GetResult<Prisma.$TOfferteLavoroPayload<ExtArgs>, T, "create">, never, ExtArgs>
 
     /**
-     * Create many Prova.
-     * @param {ProvaCreateManyArgs} args - Arguments to create many Prova.
+     * Create many TOfferteLavoros.
+     * @param {TOfferteLavoroCreateManyArgs} args - Arguments to create many TOfferteLavoros.
      * @example
-     * // Create many Prova
-     * const prova = await prisma.prova.createMany({
+     * // Create many TOfferteLavoros
+     * const tOfferteLavoro = await prisma.tOfferteLavoro.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends ProvaCreateManyArgs>(args?: SelectSubset<T, ProvaCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends TOfferteLavoroCreateManyArgs>(args?: SelectSubset<T, TOfferteLavoroCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Prova and returns the data saved in the database.
-     * @param {ProvaCreateManyAndReturnArgs} args - Arguments to create many Prova.
+     * Create many TOfferteLavoros and returns the data saved in the database.
+     * @param {TOfferteLavoroCreateManyAndReturnArgs} args - Arguments to create many TOfferteLavoros.
      * @example
-     * // Create many Prova
-     * const prova = await prisma.prova.createManyAndReturn({
+     * // Create many TOfferteLavoros
+     * const tOfferteLavoro = await prisma.tOfferteLavoro.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Prova and only return the `id`
-     * const provaWithIdOnly = await prisma.prova.createManyAndReturn({ 
-     *   select: { id: true },
+     * // Create many TOfferteLavoros and only return the `OffertaLavoroID`
+     * const tOfferteLavoroWithOffertaLavoroIDOnly = await prisma.tOfferteLavoro.createManyAndReturn({ 
+     *   select: { OffertaLavoroID: true },
      *   data: [
      *     // ... provide data here
      *   ]
@@ -1221,28 +1247,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends ProvaCreateManyAndReturnArgs>(args?: SelectSubset<T, ProvaCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ProvaPayload<ExtArgs>, T, "createManyAndReturn">>
+    createManyAndReturn<T extends TOfferteLavoroCreateManyAndReturnArgs>(args?: SelectSubset<T, TOfferteLavoroCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TOfferteLavoroPayload<ExtArgs>, T, "createManyAndReturn">>
 
     /**
-     * Delete a Prova.
-     * @param {ProvaDeleteArgs} args - Arguments to delete one Prova.
+     * Delete a TOfferteLavoro.
+     * @param {TOfferteLavoroDeleteArgs} args - Arguments to delete one TOfferteLavoro.
      * @example
-     * // Delete one Prova
-     * const Prova = await prisma.prova.delete({
+     * // Delete one TOfferteLavoro
+     * const TOfferteLavoro = await prisma.tOfferteLavoro.delete({
      *   where: {
-     *     // ... filter to delete one Prova
+     *     // ... filter to delete one TOfferteLavoro
      *   }
      * })
      * 
      */
-    delete<T extends ProvaDeleteArgs>(args: SelectSubset<T, ProvaDeleteArgs<ExtArgs>>): Prisma__ProvaClient<$Result.GetResult<Prisma.$ProvaPayload<ExtArgs>, T, "delete">, never, ExtArgs>
+    delete<T extends TOfferteLavoroDeleteArgs>(args: SelectSubset<T, TOfferteLavoroDeleteArgs<ExtArgs>>): Prisma__TOfferteLavoroClient<$Result.GetResult<Prisma.$TOfferteLavoroPayload<ExtArgs>, T, "delete">, never, ExtArgs>
 
     /**
-     * Update one Prova.
-     * @param {ProvaUpdateArgs} args - Arguments to update one Prova.
+     * Update one TOfferteLavoro.
+     * @param {TOfferteLavoroUpdateArgs} args - Arguments to update one TOfferteLavoro.
      * @example
-     * // Update one Prova
-     * const prova = await prisma.prova.update({
+     * // Update one TOfferteLavoro
+     * const tOfferteLavoro = await prisma.tOfferteLavoro.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1252,30 +1278,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends ProvaUpdateArgs>(args: SelectSubset<T, ProvaUpdateArgs<ExtArgs>>): Prisma__ProvaClient<$Result.GetResult<Prisma.$ProvaPayload<ExtArgs>, T, "update">, never, ExtArgs>
+    update<T extends TOfferteLavoroUpdateArgs>(args: SelectSubset<T, TOfferteLavoroUpdateArgs<ExtArgs>>): Prisma__TOfferteLavoroClient<$Result.GetResult<Prisma.$TOfferteLavoroPayload<ExtArgs>, T, "update">, never, ExtArgs>
 
     /**
-     * Delete zero or more Prova.
-     * @param {ProvaDeleteManyArgs} args - Arguments to filter Prova to delete.
+     * Delete zero or more TOfferteLavoros.
+     * @param {TOfferteLavoroDeleteManyArgs} args - Arguments to filter TOfferteLavoros to delete.
      * @example
-     * // Delete a few Prova
-     * const { count } = await prisma.prova.deleteMany({
+     * // Delete a few TOfferteLavoros
+     * const { count } = await prisma.tOfferteLavoro.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends ProvaDeleteManyArgs>(args?: SelectSubset<T, ProvaDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends TOfferteLavoroDeleteManyArgs>(args?: SelectSubset<T, TOfferteLavoroDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Prova.
+     * Update zero or more TOfferteLavoros.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ProvaUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {TOfferteLavoroUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Prova
-     * const prova = await prisma.prova.updateMany({
+     * // Update many TOfferteLavoros
+     * const tOfferteLavoro = await prisma.tOfferteLavoro.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1285,56 +1311,56 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends ProvaUpdateManyArgs>(args: SelectSubset<T, ProvaUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends TOfferteLavoroUpdateManyArgs>(args: SelectSubset<T, TOfferteLavoroUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create or update one Prova.
-     * @param {ProvaUpsertArgs} args - Arguments to update or create a Prova.
+     * Create or update one TOfferteLavoro.
+     * @param {TOfferteLavoroUpsertArgs} args - Arguments to update or create a TOfferteLavoro.
      * @example
-     * // Update or create a Prova
-     * const prova = await prisma.prova.upsert({
+     * // Update or create a TOfferteLavoro
+     * const tOfferteLavoro = await prisma.tOfferteLavoro.upsert({
      *   create: {
-     *     // ... data to create a Prova
+     *     // ... data to create a TOfferteLavoro
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Prova we want to update
+     *     // ... the filter for the TOfferteLavoro we want to update
      *   }
      * })
      */
-    upsert<T extends ProvaUpsertArgs>(args: SelectSubset<T, ProvaUpsertArgs<ExtArgs>>): Prisma__ProvaClient<$Result.GetResult<Prisma.$ProvaPayload<ExtArgs>, T, "upsert">, never, ExtArgs>
+    upsert<T extends TOfferteLavoroUpsertArgs>(args: SelectSubset<T, TOfferteLavoroUpsertArgs<ExtArgs>>): Prisma__TOfferteLavoroClient<$Result.GetResult<Prisma.$TOfferteLavoroPayload<ExtArgs>, T, "upsert">, never, ExtArgs>
 
 
     /**
-     * Count the number of Prova.
+     * Count the number of TOfferteLavoros.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ProvaCountArgs} args - Arguments to filter Prova to count.
+     * @param {TOfferteLavoroCountArgs} args - Arguments to filter TOfferteLavoros to count.
      * @example
-     * // Count the number of Prova
-     * const count = await prisma.prova.count({
+     * // Count the number of TOfferteLavoros
+     * const count = await prisma.tOfferteLavoro.count({
      *   where: {
-     *     // ... the filter for the Prova we want to count
+     *     // ... the filter for the TOfferteLavoros we want to count
      *   }
      * })
     **/
-    count<T extends ProvaCountArgs>(
-      args?: Subset<T, ProvaCountArgs>,
+    count<T extends TOfferteLavoroCountArgs>(
+      args?: Subset<T, TOfferteLavoroCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], ProvaCountAggregateOutputType>
+          : GetScalarType<T['select'], TOfferteLavoroCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Prova.
+     * Allows you to perform aggregations operations on a TOfferteLavoro.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ProvaAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {TOfferteLavoroAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1354,13 +1380,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends ProvaAggregateArgs>(args: Subset<T, ProvaAggregateArgs>): Prisma.PrismaPromise<GetProvaAggregateType<T>>
+    aggregate<T extends TOfferteLavoroAggregateArgs>(args: Subset<T, TOfferteLavoroAggregateArgs>): Prisma.PrismaPromise<GetTOfferteLavoroAggregateType<T>>
 
     /**
-     * Group by Prova.
+     * Group by TOfferteLavoro.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ProvaGroupByArgs} args - Group by arguments.
+     * @param {TOfferteLavoroGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1375,14 +1401,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends ProvaGroupByArgs,
+      T extends TOfferteLavoroGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: ProvaGroupByArgs['orderBy'] }
-        : { orderBy?: ProvaGroupByArgs['orderBy'] },
+        ? { orderBy: TOfferteLavoroGroupByArgs['orderBy'] }
+        : { orderBy?: TOfferteLavoroGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1431,20 +1457,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, ProvaGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetProvaGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, TOfferteLavoroGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTOfferteLavoroGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Prova model
+   * Fields of the TOfferteLavoro model
    */
-  readonly fields: ProvaFieldRefs;
+  readonly fields: TOfferteLavoroFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Prova.
+   * The delegate class that acts as a "Promise-like" for TOfferteLavoro.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__ProvaClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__TOfferteLavoroClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1472,297 +1498,299 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Prova model
+   * Fields of the TOfferteLavoro model
    */ 
-  interface ProvaFieldRefs {
-    readonly id: FieldRef<"Prova", 'Int'>
-    readonly nome: FieldRef<"Prova", 'String'>
-    readonly descrizione: FieldRef<"Prova", 'String'>
+  interface TOfferteLavoroFieldRefs {
+    readonly OffertaLavoroID: FieldRef<"TOfferteLavoro", 'Int'>
+    readonly Titolo: FieldRef<"TOfferteLavoro", 'String'>
+    readonly DescrizioneBreve: FieldRef<"TOfferteLavoro", 'String'>
+    readonly DataInserimento: FieldRef<"TOfferteLavoro", 'DateTime'>
+    readonly RetribuzioneLorda: FieldRef<"TOfferteLavoro", 'Float'>
   }
     
 
   // Custom InputTypes
   /**
-   * Prova findUnique
+   * TOfferteLavoro findUnique
    */
-  export type ProvaFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TOfferteLavoroFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Prova
+     * Select specific fields to fetch from the TOfferteLavoro
      */
-    select?: ProvaSelect<ExtArgs> | null
+    select?: TOfferteLavoroSelect<ExtArgs> | null
     /**
-     * Filter, which Prova to fetch.
+     * Filter, which TOfferteLavoro to fetch.
      */
-    where: ProvaWhereUniqueInput
+    where: TOfferteLavoroWhereUniqueInput
   }
 
   /**
-   * Prova findUniqueOrThrow
+   * TOfferteLavoro findUniqueOrThrow
    */
-  export type ProvaFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TOfferteLavoroFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Prova
+     * Select specific fields to fetch from the TOfferteLavoro
      */
-    select?: ProvaSelect<ExtArgs> | null
+    select?: TOfferteLavoroSelect<ExtArgs> | null
     /**
-     * Filter, which Prova to fetch.
+     * Filter, which TOfferteLavoro to fetch.
      */
-    where: ProvaWhereUniqueInput
+    where: TOfferteLavoroWhereUniqueInput
   }
 
   /**
-   * Prova findFirst
+   * TOfferteLavoro findFirst
    */
-  export type ProvaFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TOfferteLavoroFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Prova
+     * Select specific fields to fetch from the TOfferteLavoro
      */
-    select?: ProvaSelect<ExtArgs> | null
+    select?: TOfferteLavoroSelect<ExtArgs> | null
     /**
-     * Filter, which Prova to fetch.
+     * Filter, which TOfferteLavoro to fetch.
      */
-    where?: ProvaWhereInput
+    where?: TOfferteLavoroWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Prova to fetch.
+     * Determine the order of TOfferteLavoros to fetch.
      */
-    orderBy?: ProvaOrderByWithRelationInput | ProvaOrderByWithRelationInput[]
+    orderBy?: TOfferteLavoroOrderByWithRelationInput | TOfferteLavoroOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Prova.
+     * Sets the position for searching for TOfferteLavoros.
      */
-    cursor?: ProvaWhereUniqueInput
+    cursor?: TOfferteLavoroWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Prova from the position of the cursor.
+     * Take `±n` TOfferteLavoros from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Prova.
+     * Skip the first `n` TOfferteLavoros.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Prova.
+     * Filter by unique combinations of TOfferteLavoros.
      */
-    distinct?: ProvaScalarFieldEnum | ProvaScalarFieldEnum[]
+    distinct?: TOfferteLavoroScalarFieldEnum | TOfferteLavoroScalarFieldEnum[]
   }
 
   /**
-   * Prova findFirstOrThrow
+   * TOfferteLavoro findFirstOrThrow
    */
-  export type ProvaFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TOfferteLavoroFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Prova
+     * Select specific fields to fetch from the TOfferteLavoro
      */
-    select?: ProvaSelect<ExtArgs> | null
+    select?: TOfferteLavoroSelect<ExtArgs> | null
     /**
-     * Filter, which Prova to fetch.
+     * Filter, which TOfferteLavoro to fetch.
      */
-    where?: ProvaWhereInput
+    where?: TOfferteLavoroWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Prova to fetch.
+     * Determine the order of TOfferteLavoros to fetch.
      */
-    orderBy?: ProvaOrderByWithRelationInput | ProvaOrderByWithRelationInput[]
+    orderBy?: TOfferteLavoroOrderByWithRelationInput | TOfferteLavoroOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Prova.
+     * Sets the position for searching for TOfferteLavoros.
      */
-    cursor?: ProvaWhereUniqueInput
+    cursor?: TOfferteLavoroWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Prova from the position of the cursor.
+     * Take `±n` TOfferteLavoros from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Prova.
+     * Skip the first `n` TOfferteLavoros.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Prova.
+     * Filter by unique combinations of TOfferteLavoros.
      */
-    distinct?: ProvaScalarFieldEnum | ProvaScalarFieldEnum[]
+    distinct?: TOfferteLavoroScalarFieldEnum | TOfferteLavoroScalarFieldEnum[]
   }
 
   /**
-   * Prova findMany
+   * TOfferteLavoro findMany
    */
-  export type ProvaFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TOfferteLavoroFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Prova
+     * Select specific fields to fetch from the TOfferteLavoro
      */
-    select?: ProvaSelect<ExtArgs> | null
+    select?: TOfferteLavoroSelect<ExtArgs> | null
     /**
-     * Filter, which Prova to fetch.
+     * Filter, which TOfferteLavoros to fetch.
      */
-    where?: ProvaWhereInput
+    where?: TOfferteLavoroWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Prova to fetch.
+     * Determine the order of TOfferteLavoros to fetch.
      */
-    orderBy?: ProvaOrderByWithRelationInput | ProvaOrderByWithRelationInput[]
+    orderBy?: TOfferteLavoroOrderByWithRelationInput | TOfferteLavoroOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Prova.
+     * Sets the position for listing TOfferteLavoros.
      */
-    cursor?: ProvaWhereUniqueInput
+    cursor?: TOfferteLavoroWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Prova from the position of the cursor.
+     * Take `±n` TOfferteLavoros from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Prova.
+     * Skip the first `n` TOfferteLavoros.
      */
     skip?: number
-    distinct?: ProvaScalarFieldEnum | ProvaScalarFieldEnum[]
+    distinct?: TOfferteLavoroScalarFieldEnum | TOfferteLavoroScalarFieldEnum[]
   }
 
   /**
-   * Prova create
+   * TOfferteLavoro create
    */
-  export type ProvaCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TOfferteLavoroCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Prova
+     * Select specific fields to fetch from the TOfferteLavoro
      */
-    select?: ProvaSelect<ExtArgs> | null
+    select?: TOfferteLavoroSelect<ExtArgs> | null
     /**
-     * The data needed to create a Prova.
+     * The data needed to create a TOfferteLavoro.
      */
-    data: XOR<ProvaCreateInput, ProvaUncheckedCreateInput>
+    data: XOR<TOfferteLavoroCreateInput, TOfferteLavoroUncheckedCreateInput>
   }
 
   /**
-   * Prova createMany
+   * TOfferteLavoro createMany
    */
-  export type ProvaCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TOfferteLavoroCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Prova.
+     * The data used to create many TOfferteLavoros.
      */
-    data: ProvaCreateManyInput | ProvaCreateManyInput[]
+    data: TOfferteLavoroCreateManyInput | TOfferteLavoroCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Prova createManyAndReturn
+   * TOfferteLavoro createManyAndReturn
    */
-  export type ProvaCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TOfferteLavoroCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Prova
+     * Select specific fields to fetch from the TOfferteLavoro
      */
-    select?: ProvaSelectCreateManyAndReturn<ExtArgs> | null
+    select?: TOfferteLavoroSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * The data used to create many Prova.
+     * The data used to create many TOfferteLavoros.
      */
-    data: ProvaCreateManyInput | ProvaCreateManyInput[]
+    data: TOfferteLavoroCreateManyInput | TOfferteLavoroCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Prova update
+   * TOfferteLavoro update
    */
-  export type ProvaUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TOfferteLavoroUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Prova
+     * Select specific fields to fetch from the TOfferteLavoro
      */
-    select?: ProvaSelect<ExtArgs> | null
+    select?: TOfferteLavoroSelect<ExtArgs> | null
     /**
-     * The data needed to update a Prova.
+     * The data needed to update a TOfferteLavoro.
      */
-    data: XOR<ProvaUpdateInput, ProvaUncheckedUpdateInput>
+    data: XOR<TOfferteLavoroUpdateInput, TOfferteLavoroUncheckedUpdateInput>
     /**
-     * Choose, which Prova to update.
+     * Choose, which TOfferteLavoro to update.
      */
-    where: ProvaWhereUniqueInput
+    where: TOfferteLavoroWhereUniqueInput
   }
 
   /**
-   * Prova updateMany
+   * TOfferteLavoro updateMany
    */
-  export type ProvaUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TOfferteLavoroUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Prova.
+     * The data used to update TOfferteLavoros.
      */
-    data: XOR<ProvaUpdateManyMutationInput, ProvaUncheckedUpdateManyInput>
+    data: XOR<TOfferteLavoroUpdateManyMutationInput, TOfferteLavoroUncheckedUpdateManyInput>
     /**
-     * Filter which Prova to update
+     * Filter which TOfferteLavoros to update
      */
-    where?: ProvaWhereInput
+    where?: TOfferteLavoroWhereInput
   }
 
   /**
-   * Prova upsert
+   * TOfferteLavoro upsert
    */
-  export type ProvaUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TOfferteLavoroUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Prova
+     * Select specific fields to fetch from the TOfferteLavoro
      */
-    select?: ProvaSelect<ExtArgs> | null
+    select?: TOfferteLavoroSelect<ExtArgs> | null
     /**
-     * The filter to search for the Prova to update in case it exists.
+     * The filter to search for the TOfferteLavoro to update in case it exists.
      */
-    where: ProvaWhereUniqueInput
+    where: TOfferteLavoroWhereUniqueInput
     /**
-     * In case the Prova found by the `where` argument doesn't exist, create a new Prova with this data.
+     * In case the TOfferteLavoro found by the `where` argument doesn't exist, create a new TOfferteLavoro with this data.
      */
-    create: XOR<ProvaCreateInput, ProvaUncheckedCreateInput>
+    create: XOR<TOfferteLavoroCreateInput, TOfferteLavoroUncheckedCreateInput>
     /**
-     * In case the Prova was found with the provided `where` argument, update it with this data.
+     * In case the TOfferteLavoro was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<ProvaUpdateInput, ProvaUncheckedUpdateInput>
+    update: XOR<TOfferteLavoroUpdateInput, TOfferteLavoroUncheckedUpdateInput>
   }
 
   /**
-   * Prova delete
+   * TOfferteLavoro delete
    */
-  export type ProvaDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TOfferteLavoroDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Prova
+     * Select specific fields to fetch from the TOfferteLavoro
      */
-    select?: ProvaSelect<ExtArgs> | null
+    select?: TOfferteLavoroSelect<ExtArgs> | null
     /**
-     * Filter which Prova to delete.
+     * Filter which TOfferteLavoro to delete.
      */
-    where: ProvaWhereUniqueInput
+    where: TOfferteLavoroWhereUniqueInput
   }
 
   /**
-   * Prova deleteMany
+   * TOfferteLavoro deleteMany
    */
-  export type ProvaDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TOfferteLavoroDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Prova to delete
+     * Filter which TOfferteLavoros to delete
      */
-    where?: ProvaWhereInput
+    where?: TOfferteLavoroWhereInput
   }
 
   /**
-   * Prova without action
+   * TOfferteLavoro without action
    */
-  export type ProvaDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TOfferteLavoroDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Prova
+     * Select specific fields to fetch from the TOfferteLavoro
      */
-    select?: ProvaSelect<ExtArgs> | null
+    select?: TOfferteLavoroSelect<ExtArgs> | null
   }
 
 
@@ -1780,13 +1808,15 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const ProvaScalarFieldEnum: {
-    id: 'id',
-    nome: 'nome',
-    descrizione: 'descrizione'
+  export const TOfferteLavoroScalarFieldEnum: {
+    OffertaLavoroID: 'OffertaLavoroID',
+    Titolo: 'Titolo',
+    DescrizioneBreve: 'DescrizioneBreve',
+    DataInserimento: 'DataInserimento',
+    RetribuzioneLorda: 'RetribuzioneLorda'
   };
 
-  export type ProvaScalarFieldEnum = (typeof ProvaScalarFieldEnum)[keyof typeof ProvaScalarFieldEnum]
+  export type TOfferteLavoroScalarFieldEnum = (typeof TOfferteLavoroScalarFieldEnum)[keyof typeof TOfferteLavoroScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -1839,6 +1869,20 @@ export namespace Prisma {
 
 
   /**
+   * Reference to a field of type 'DateTime'
+   */
+  export type DateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime'>
+    
+
+
+  /**
+   * Reference to a field of type 'DateTime[]'
+   */
+  export type ListDateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime[]'>
+    
+
+
+  /**
    * Reference to a field of type 'Float'
    */
   export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float'>
@@ -1855,87 +1899,111 @@ export namespace Prisma {
    */
 
 
-  export type ProvaWhereInput = {
-    AND?: ProvaWhereInput | ProvaWhereInput[]
-    OR?: ProvaWhereInput[]
-    NOT?: ProvaWhereInput | ProvaWhereInput[]
-    id?: IntFilter<"Prova"> | number
-    nome?: StringFilter<"Prova"> | string
-    descrizione?: StringFilter<"Prova"> | string
+  export type TOfferteLavoroWhereInput = {
+    AND?: TOfferteLavoroWhereInput | TOfferteLavoroWhereInput[]
+    OR?: TOfferteLavoroWhereInput[]
+    NOT?: TOfferteLavoroWhereInput | TOfferteLavoroWhereInput[]
+    OffertaLavoroID?: IntFilter<"TOfferteLavoro"> | number
+    Titolo?: StringFilter<"TOfferteLavoro"> | string
+    DescrizioneBreve?: StringFilter<"TOfferteLavoro"> | string
+    DataInserimento?: DateTimeFilter<"TOfferteLavoro"> | Date | string
+    RetribuzioneLorda?: FloatFilter<"TOfferteLavoro"> | number
   }
 
-  export type ProvaOrderByWithRelationInput = {
-    id?: SortOrder
-    nome?: SortOrder
-    descrizione?: SortOrder
+  export type TOfferteLavoroOrderByWithRelationInput = {
+    OffertaLavoroID?: SortOrder
+    Titolo?: SortOrder
+    DescrizioneBreve?: SortOrder
+    DataInserimento?: SortOrder
+    RetribuzioneLorda?: SortOrder
   }
 
-  export type ProvaWhereUniqueInput = Prisma.AtLeast<{
-    id?: number
-    AND?: ProvaWhereInput | ProvaWhereInput[]
-    OR?: ProvaWhereInput[]
-    NOT?: ProvaWhereInput | ProvaWhereInput[]
-    nome?: StringFilter<"Prova"> | string
-    descrizione?: StringFilter<"Prova"> | string
-  }, "id">
+  export type TOfferteLavoroWhereUniqueInput = Prisma.AtLeast<{
+    OffertaLavoroID?: number
+    AND?: TOfferteLavoroWhereInput | TOfferteLavoroWhereInput[]
+    OR?: TOfferteLavoroWhereInput[]
+    NOT?: TOfferteLavoroWhereInput | TOfferteLavoroWhereInput[]
+    Titolo?: StringFilter<"TOfferteLavoro"> | string
+    DescrizioneBreve?: StringFilter<"TOfferteLavoro"> | string
+    DataInserimento?: DateTimeFilter<"TOfferteLavoro"> | Date | string
+    RetribuzioneLorda?: FloatFilter<"TOfferteLavoro"> | number
+  }, "OffertaLavoroID">
 
-  export type ProvaOrderByWithAggregationInput = {
-    id?: SortOrder
-    nome?: SortOrder
-    descrizione?: SortOrder
-    _count?: ProvaCountOrderByAggregateInput
-    _avg?: ProvaAvgOrderByAggregateInput
-    _max?: ProvaMaxOrderByAggregateInput
-    _min?: ProvaMinOrderByAggregateInput
-    _sum?: ProvaSumOrderByAggregateInput
+  export type TOfferteLavoroOrderByWithAggregationInput = {
+    OffertaLavoroID?: SortOrder
+    Titolo?: SortOrder
+    DescrizioneBreve?: SortOrder
+    DataInserimento?: SortOrder
+    RetribuzioneLorda?: SortOrder
+    _count?: TOfferteLavoroCountOrderByAggregateInput
+    _avg?: TOfferteLavoroAvgOrderByAggregateInput
+    _max?: TOfferteLavoroMaxOrderByAggregateInput
+    _min?: TOfferteLavoroMinOrderByAggregateInput
+    _sum?: TOfferteLavoroSumOrderByAggregateInput
   }
 
-  export type ProvaScalarWhereWithAggregatesInput = {
-    AND?: ProvaScalarWhereWithAggregatesInput | ProvaScalarWhereWithAggregatesInput[]
-    OR?: ProvaScalarWhereWithAggregatesInput[]
-    NOT?: ProvaScalarWhereWithAggregatesInput | ProvaScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"Prova"> | number
-    nome?: StringWithAggregatesFilter<"Prova"> | string
-    descrizione?: StringWithAggregatesFilter<"Prova"> | string
+  export type TOfferteLavoroScalarWhereWithAggregatesInput = {
+    AND?: TOfferteLavoroScalarWhereWithAggregatesInput | TOfferteLavoroScalarWhereWithAggregatesInput[]
+    OR?: TOfferteLavoroScalarWhereWithAggregatesInput[]
+    NOT?: TOfferteLavoroScalarWhereWithAggregatesInput | TOfferteLavoroScalarWhereWithAggregatesInput[]
+    OffertaLavoroID?: IntWithAggregatesFilter<"TOfferteLavoro"> | number
+    Titolo?: StringWithAggregatesFilter<"TOfferteLavoro"> | string
+    DescrizioneBreve?: StringWithAggregatesFilter<"TOfferteLavoro"> | string
+    DataInserimento?: DateTimeWithAggregatesFilter<"TOfferteLavoro"> | Date | string
+    RetribuzioneLorda?: FloatWithAggregatesFilter<"TOfferteLavoro"> | number
   }
 
-  export type ProvaCreateInput = {
-    nome: string
-    descrizione: string
+  export type TOfferteLavoroCreateInput = {
+    Titolo: string
+    DescrizioneBreve: string
+    DataInserimento: Date | string
+    RetribuzioneLorda: number
   }
 
-  export type ProvaUncheckedCreateInput = {
-    id?: number
-    nome: string
-    descrizione: string
+  export type TOfferteLavoroUncheckedCreateInput = {
+    OffertaLavoroID?: number
+    Titolo: string
+    DescrizioneBreve: string
+    DataInserimento: Date | string
+    RetribuzioneLorda: number
   }
 
-  export type ProvaUpdateInput = {
-    nome?: StringFieldUpdateOperationsInput | string
-    descrizione?: StringFieldUpdateOperationsInput | string
+  export type TOfferteLavoroUpdateInput = {
+    Titolo?: StringFieldUpdateOperationsInput | string
+    DescrizioneBreve?: StringFieldUpdateOperationsInput | string
+    DataInserimento?: DateTimeFieldUpdateOperationsInput | Date | string
+    RetribuzioneLorda?: FloatFieldUpdateOperationsInput | number
   }
 
-  export type ProvaUncheckedUpdateInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    nome?: StringFieldUpdateOperationsInput | string
-    descrizione?: StringFieldUpdateOperationsInput | string
+  export type TOfferteLavoroUncheckedUpdateInput = {
+    OffertaLavoroID?: IntFieldUpdateOperationsInput | number
+    Titolo?: StringFieldUpdateOperationsInput | string
+    DescrizioneBreve?: StringFieldUpdateOperationsInput | string
+    DataInserimento?: DateTimeFieldUpdateOperationsInput | Date | string
+    RetribuzioneLorda?: FloatFieldUpdateOperationsInput | number
   }
 
-  export type ProvaCreateManyInput = {
-    id?: number
-    nome: string
-    descrizione: string
+  export type TOfferteLavoroCreateManyInput = {
+    OffertaLavoroID?: number
+    Titolo: string
+    DescrizioneBreve: string
+    DataInserimento: Date | string
+    RetribuzioneLorda: number
   }
 
-  export type ProvaUpdateManyMutationInput = {
-    nome?: StringFieldUpdateOperationsInput | string
-    descrizione?: StringFieldUpdateOperationsInput | string
+  export type TOfferteLavoroUpdateManyMutationInput = {
+    Titolo?: StringFieldUpdateOperationsInput | string
+    DescrizioneBreve?: StringFieldUpdateOperationsInput | string
+    DataInserimento?: DateTimeFieldUpdateOperationsInput | Date | string
+    RetribuzioneLorda?: FloatFieldUpdateOperationsInput | number
   }
 
-  export type ProvaUncheckedUpdateManyInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    nome?: StringFieldUpdateOperationsInput | string
-    descrizione?: StringFieldUpdateOperationsInput | string
+  export type TOfferteLavoroUncheckedUpdateManyInput = {
+    OffertaLavoroID?: IntFieldUpdateOperationsInput | number
+    Titolo?: StringFieldUpdateOperationsInput | string
+    DescrizioneBreve?: StringFieldUpdateOperationsInput | string
+    DataInserimento?: DateTimeFieldUpdateOperationsInput | Date | string
+    RetribuzioneLorda?: FloatFieldUpdateOperationsInput | number
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -1964,30 +2032,60 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type ProvaCountOrderByAggregateInput = {
-    id?: SortOrder
-    nome?: SortOrder
-    descrizione?: SortOrder
+  export type DateTimeFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
-  export type ProvaAvgOrderByAggregateInput = {
-    id?: SortOrder
+  export type FloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
   }
 
-  export type ProvaMaxOrderByAggregateInput = {
-    id?: SortOrder
-    nome?: SortOrder
-    descrizione?: SortOrder
+  export type TOfferteLavoroCountOrderByAggregateInput = {
+    OffertaLavoroID?: SortOrder
+    Titolo?: SortOrder
+    DescrizioneBreve?: SortOrder
+    DataInserimento?: SortOrder
+    RetribuzioneLorda?: SortOrder
   }
 
-  export type ProvaMinOrderByAggregateInput = {
-    id?: SortOrder
-    nome?: SortOrder
-    descrizione?: SortOrder
+  export type TOfferteLavoroAvgOrderByAggregateInput = {
+    OffertaLavoroID?: SortOrder
+    RetribuzioneLorda?: SortOrder
   }
 
-  export type ProvaSumOrderByAggregateInput = {
-    id?: SortOrder
+  export type TOfferteLavoroMaxOrderByAggregateInput = {
+    OffertaLavoroID?: SortOrder
+    Titolo?: SortOrder
+    DescrizioneBreve?: SortOrder
+    DataInserimento?: SortOrder
+    RetribuzioneLorda?: SortOrder
+  }
+
+  export type TOfferteLavoroMinOrderByAggregateInput = {
+    OffertaLavoroID?: SortOrder
+    Titolo?: SortOrder
+    DescrizioneBreve?: SortOrder
+    DataInserimento?: SortOrder
+    RetribuzioneLorda?: SortOrder
+  }
+
+  export type TOfferteLavoroSumOrderByAggregateInput = {
+    OffertaLavoroID?: SortOrder
+    RetribuzioneLorda?: SortOrder
   }
 
   export type IntWithAggregatesFilter<$PrismaModel = never> = {
@@ -2024,8 +2122,50 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
+  export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedDateTimeFilter<$PrismaModel>
+    _max?: NestedDateTimeFilter<$PrismaModel>
+  }
+
+  export type FloatWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedFloatFilter<$PrismaModel>
+    _min?: NestedFloatFilter<$PrismaModel>
+    _max?: NestedFloatFilter<$PrismaModel>
+  }
+
   export type StringFieldUpdateOperationsInput = {
     set?: string
+  }
+
+  export type DateTimeFieldUpdateOperationsInput = {
+    set?: Date | string
+  }
+
+  export type FloatFieldUpdateOperationsInput = {
+    set?: number
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
   }
 
   export type IntFieldUpdateOperationsInput = {
@@ -2061,6 +2201,28 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
+  export type NestedDateTimeFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
+  }
+
+  export type NestedFloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
+  }
+
   export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel>
     in?: number[] | ListIntFieldRefInput<$PrismaModel>
@@ -2075,17 +2237,6 @@ export namespace Prisma {
     _sum?: NestedIntFilter<$PrismaModel>
     _min?: NestedIntFilter<$PrismaModel>
     _max?: NestedIntFilter<$PrismaModel>
-  }
-
-  export type NestedFloatFilter<$PrismaModel = never> = {
-    equals?: number | FloatFieldRefInput<$PrismaModel>
-    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    lt?: number | FloatFieldRefInput<$PrismaModel>
-    lte?: number | FloatFieldRefInput<$PrismaModel>
-    gt?: number | FloatFieldRefInput<$PrismaModel>
-    gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatFilter<$PrismaModel> | number
   }
 
   export type NestedStringWithAggregatesFilter<$PrismaModel = never> = {
@@ -2105,15 +2256,45 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
+  export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedDateTimeFilter<$PrismaModel>
+    _max?: NestedDateTimeFilter<$PrismaModel>
+  }
+
+  export type NestedFloatWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedFloatFilter<$PrismaModel>
+    _min?: NestedFloatFilter<$PrismaModel>
+    _max?: NestedFloatFilter<$PrismaModel>
+  }
+
 
 
   /**
    * Aliases for legacy arg types
    */
     /**
-     * @deprecated Use ProvaDefaultArgs instead
+     * @deprecated Use TOfferteLavoroDefaultArgs instead
      */
-    export type ProvaArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = ProvaDefaultArgs<ExtArgs>
+    export type TOfferteLavoroArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = TOfferteLavoroDefaultArgs<ExtArgs>
 
   /**
    * Batch Payload for updateMany & deleteMany & createMany
