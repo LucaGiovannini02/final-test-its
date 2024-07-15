@@ -2,6 +2,7 @@
 
 import InfoCard from "@/components/InfoCard"
 import LavoroCard from "@/components/LavoroCard"
+import LavoroTitle from "@/components/LavoroTitle"
 import Loading from "@/components/Loading"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog"
@@ -70,6 +71,7 @@ const Page = () => {
                 )}
                 />
 
+            <LavoroTitle />
             {data && <div>
                 {data.data.map((l) => (
                     <div key={l.OffertaLavoroID} className="mt-3">

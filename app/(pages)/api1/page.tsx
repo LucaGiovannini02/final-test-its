@@ -2,6 +2,7 @@
 
 import InfoCard from "@/components/InfoCard"
 import LavoroCard from "@/components/LavoroCard"
+import LavoroTitle from "@/components/LavoroTitle"
 import Loading from "@/components/Loading"
 import { Input } from "@/components/ui/input"
 import API from "@/lib/axios"
@@ -70,6 +71,7 @@ const Page = () => {
                 </div>)} />
 
             <Input min={0} value={max} onChange={(e) => handleMaxChange(e.target.value)} placeholder="Numero massimo" className="w-[200px] mt-3" type="number" />
+            <LavoroTitle />
             {data && <div>
                 {data.data.map((l) => (
                     <div key={l.OffertaLavoroID} className="mt-3">

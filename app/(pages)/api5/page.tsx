@@ -2,6 +2,7 @@
 
 import InfoCard from "@/components/InfoCard"
 import LavoroCard from "@/components/LavoroCard"
+import LavoroTitle from "@/components/LavoroTitle"
 import Loading from "@/components/Loading"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -89,6 +90,8 @@ const Page = () => {
                 <Input min={0} value={max} onChange={(e) => handleMaxChange(e.target.value)} placeholder="Numero massimo" className="w-[200px]" type="number" />
                 <Button onClick={apply}>Applica</Button>
             </div>
+
+            <LavoroTitle />
             {data && <div>
                 {data.data.map((l) => (
                     <div key={l.OffertaLavoroID} className="mt-3">

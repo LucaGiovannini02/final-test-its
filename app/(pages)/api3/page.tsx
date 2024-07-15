@@ -2,6 +2,7 @@
 
 import InfoCard from "@/components/InfoCard"
 import LavoroCard from "@/components/LavoroCard"
+import LavoroTitle from "@/components/LavoroTitle"
 import Loading from "@/components/Loading"
 import { Button } from "@/components/ui/button"
 import { Calendar } from "@/components/ui/calendar"
@@ -98,6 +99,7 @@ const Page = () => {
                     &#125;
                 </div>)} />
 
+            <LavoroTitle />
             {data && <div>
                 {data.data.map((l) => (
                     <div key={l.OffertaLavoroID} className="mt-3">
