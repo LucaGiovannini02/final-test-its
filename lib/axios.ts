@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-    url: "http://localhost:3000/"
+    url: "https://luca-giovannini.vercel.app/"
 })
 
 export default API
